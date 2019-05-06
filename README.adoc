@@ -1,0 +1,37 @@
+= Lagom based reactive microservice - address book
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 1
+:sectlinks:
+
+= Introduction
+The application creates, update and queries contact data
+
+= Tools/Framework
+- Lagom as framework for reactive microservice development
+- Cassandra as distributed/event driven storage
+
+= Quickstart
+To run:
+```
+$ mvn clean
+$ mvn lagom:runAll
+
+```
+
+To remote debug
+```
+mvnDebug lagom:runAll
+```
+Then on IDE (i.e IntelliJ) use remote debugging in "Edit Configuration" with default
+port number 8000 and module selected as the impl one from the listed modules.
+
+
+= TODOs
+Implement the read-side for refined queries.
+Add Swagger API docs (not well supported yet like Spring Boot)
+Async using Message broker api
+
+= Notes
+Only addressbook-api and addressbook-impl modules are relevant. Streaming modules will be considered for Async examples
